@@ -1,0 +1,98 @@
+{
+    "name": "MJ-SIR",
+    "description": "MJ-SIR - Whatsapp Bot",
+    "logo": "https://i.imgur.com/W0i7oMY.jpeg",
+    "keywords": ["whatsapp", "userbot", "Asena", "WhatsAsena", "bot", "api", "ai"],
+    "repository": "https://github.com/MIDU-SER/MJ-SIR",
+    "website":   "https://github.com/MIDU-SER/MJ-SIR",
+    "success_url": "https://github.com/MIDU-SER/MJ-SIR",
+    "stack": "container",
+    "env": {
+        "CONNECTION_CODE": {
+            "description": "Asena session changed! Type your MJ-SIR code here.",
+            "required": true
+        },
+        "SUDO": {
+            "description": " Sudo mode; Your number must be an international number.",
+            "required": false
+        },
+        "LANGUAGE": {
+            "description": "Bot language. English => en, Malayalam => ml",
+            "required": true,
+            "value": "ml"
+        },
+        "BOT_PRESENCE": {
+            "description": "Type the Presence of bot, presences: online => Always Shows the online, offline => Always Shows offline, typing => Always Shows typing, recording => Always Shows recording.",
+            "required": false,
+            "value": "recording"
+        },
+        "ANTİ_LİNK": {
+            "description": " Link Blocking System.",
+            "required": true,
+            "value": "false"
+        },
+        "AUTO_BİO": {
+            "description": "Set true for auto date, time in biography.",
+            "required": true,
+            "value": "false"
+        },
+        "HANDLERS": {
+            "description": "For commands.",
+            "required": true,
+            "value": "^[.!;]"
+        },
+        "OWNER_NAME": {
+            "description": "reply for .owner ! give your details, Use => default, to change back.",
+            "required": false,
+            "value": "default"
+        },
+        "SEND_READ": {
+            "description": "Write true if you want to throw seen.",
+            "required": true,
+            "value": "true"
+        },
+        "HEROKU": {
+            "description": "If it is running in Heroku, type true.",
+            "required": true,
+            "value": "true"
+        },
+        "HEROKU_API_KEY": {
+            "description": "Heroku API Key.",
+            "required": true
+        },
+        "DISABLE_BOT": {
+            "description": "Choose in which chat the bot won't work there. Ex: 905xxxx && 905xxxx-1xxx or 905xxxx,905xxx...",
+            "required": false,
+            "value": "false"
+        },
+        "HEROKU_APP_NAME": {
+            "description": "Herokuda uygulama adı. Heroku APP Name.",
+            "required": true
+        },
+        "DEBUG": {
+            "description": "Geliştiricilere özeldir.",
+            "required": true,
+            "value": "false"
+        },
+        "REMOVE_BG_API_KEY": {
+            "description": "https://remove.bg",
+            "required": false
+        },
+        "NO_ONLINE": {
+            "description": "Type true if you don't want to appear online.",
+            "required": false,
+            "value": "true"
+        },
+        "WORK_TYPE": {
+            "description": "WhatsAsena Working Type. If you use “public”, everyone can use the bot. Else if you use “private”, only you can use your bot.",
+            "required": true,
+            "value": "public"
+        },
+    },
+    "addons": [{
+      "plan": "heroku-postgresql"
+    }],
+    "buildpacks": [{
+      "url": "heroku-community/apt"
+      }]
+  }
