@@ -9,7 +9,7 @@ const Config = require('../config');
 const Language = require('../language');
 const Lang = Language.getString('scrapers');
 
-Midu.addCommand({pattern: 'device ?(.*)', fromMe: true, desc: Lang.DEVICE , dontAddCommandList: true }, async (message, match) => {
+Midu.addCommand({pattern: 'device ?(.*)', fromMe: true, desc: "Divice Details" , dontAddCommandList: true }, async (message, match) => {
     
 const {data} = await axios(`https://zenzapi.xyz/api/gsmarena?query=${match[1]}&apikey=a9a05974d30e`)
 const { status, result } = data
