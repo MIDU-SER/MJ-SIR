@@ -7,6 +7,7 @@ const con = require('../config');
 const ENZAR = "Roll dice randomly."
 const ENSEN = "🍀 ```Rolling Dice!``` 🎲"
 const ENSON = "```Dice Rolled:``` "
+const TRZAR = "Roll The Dice"
 
         Midu.addCommand({pattern: 'roll', fromMe: true, desc: TRZAR}, (async (message, match) => {
 
